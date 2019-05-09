@@ -1,6 +1,6 @@
 # Modélisation prédictive avec R dans un contexte de production - De l’extraction au déploiement
 
-Cet atelier est présenté dans le cadre de l'événement R à Québec 2019. Ce dépôt servira de base pour que les particpants puissent développer leurs programmes.
+Cet atelier est présenté dans le cadre de l'événement R à Québec 2019. Ce dépôt servira de base pour que les participants puissent développer leurs programmes.
 
 ## Prérequis
 
@@ -34,9 +34,9 @@ Notez que certains de ces packages peuvent demander des installations de librair
 
 ## Démarrage
 
-Nous vous recommendons de partir de cette structure pour les programmes que vous allez développer durant l'atelier. Pour télécharger le dépôt, vous pouvez cliquer sur le bouton "Clone or download" et sur "Download ZIP" sur votre ordinateur.
+Nous vous recommendons de partir de cette structure pour les programmes que vous allez développer durant l'atelier. Pour télécharger le dépôt, vous pouvez cliquer sur le bouton "Clone or download" et sur "Download ZIP" pour télécharger le contenu sur votre ordinateur.
 
-Pour ceux qui ont Git d'installer localement, vous pouvez cloner le dépot:
+Pour ceux qui sont familiers avec Git, vous pouvez cloner le dépot:
 
 ```
 git clone https://github.com/dot-layer/atelier-modelisation-rqc2019.git
