@@ -41,3 +41,25 @@ Pour ceux qui ont Git d'installer localement, vous pouvez cloner le dépot:
 ```
 git clone https://github.com/dot-layer/atelier-modelisation-rqc2019.git
 ```
+
+## Structure du dépôt
+
+├── README.md          <- Document de haut-niveau pour l'atelier.
+│
+├── data               <- Dossier contenant les données téléchargées localement.
+│
+├── models             <- Dossier contenant les objets sauvegardés lors de l'entraînement.
+│
+├── src                <- Codes source utilisé dans le projet.
+│   │
+│   ├── extraction     <- Codes source qui font l'extraction et la collecte de données.
+│   │
+│   ├── exploration    <- Codes source qui font l'exploration des données.
+│   │
+│   ├── pretraitements <- Codes source qui font le prétraitements des données.
+│   │
+│   ├── modelisation   <- Codes source qui font l'entraînement et le diagnostic des modèles.
+│   │
+│   └── visualization  <- Codes source qui font le déploiement du modèle.
+│ 
+└── atelier-modelisation-rqc2019.Rproj  <- Projet RStudio.
