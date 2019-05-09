@@ -29,6 +29,9 @@ Nous demandons également d'avoir la liste de packages R suivants d'installés a
 - stringi
 - purrr
 - plotly
+- class
+- plumber
+- opencpu
 
 Notez que certains de ces packages peuvent demander des installations de librairies de système. Voir les documentations des packages au besoin.
 
@@ -61,7 +64,7 @@ git clone https://github.com/dot-layer/atelier-modelisation-rqc2019.git
 │   │
 │   ├── modelisation   <- Codes source qui font l'entraînement et le diagnostic des modèles.
 │   │
-│   └── visualization  <- Codes source qui font le déploiement du modèle.
+│   └── deploiement    <- Codes source qui font le déploiement du modèle.
 │ 
 └── atelier-modelisation-rqc2019.Rproj  <- Projet RStudio.
 ```
