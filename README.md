@@ -44,6 +44,7 @@ git clone https://github.com/dot-layer/atelier-modelisation-rqc2019.git
 
 ## Structure du dépôt
 
+```
 ├── README.md          <- Document de haut-niveau pour l'atelier.
 │
 ├── data               <- Dossier contenant les données téléchargées localement.
@@ -63,3 +64,4 @@ git clone https://github.com/dot-layer/atelier-modelisation-rqc2019.git
 │   └── visualization  <- Codes source qui font le déploiement du modèle.
 │ 
 └── atelier-modelisation-rqc2019.Rproj  <- Projet RStudio.
+```
