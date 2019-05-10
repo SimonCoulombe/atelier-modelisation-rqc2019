@@ -8,7 +8,9 @@ Pour l'atelier, nous demandons d'avoir les logiciels suivants:
 
 - [R](http://cran.utstat.utoronto.ca/) (>= 3.5.0)
 - [RStudio](https://www.rstudio.com/products/rstudio/download/) (>= 1.0.0)
-- [Docker](https://runnable.com/docker/getting-started/)
+- [Docker](https://runnable.com/docker/getting-started/)*
+
+* Pour l'installation de Docker sur Windows, une version professionnelle de Windows 10 est nécessaire. Si vous n'êtes pas en mesure de l'installer, nous trouverons une autre alternative le jour de l'événement. 
 
 Nous demandons également d'avoir la liste de packages R suivants d'installés avant la journée de l'événement:
 
