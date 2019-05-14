@@ -48,8 +48,9 @@ preprocessing <- function(data, train_mode=TRUE, list_objects=NULL) {
     # TODO: Definir la variable reponse
     
     # classif: 
-    data[, target := as.integer(start_station_code == end_station_code)]
-    # regression: setnames(data, "duration_sec", "target")
+    # data[, target := as.integer(start_station_code == end_station_code)]
+    # regression: 
+    setnames(data, "duration_sec", "target")
     
     
     
