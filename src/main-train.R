@@ -53,24 +53,25 @@ ind_test <- sample(nrow(historical_data), 0.25 * nrow(historical_data))
 # Faire le pretraitements des données d'entrainement en appelant la fonction: preprocessing()
 # On veut rouler le prétraitement en mode entrainement
 # Le ouput de la fonction est une liste d'objets qu'on doit stocker dans "data_preprocessed"
+data_preprocessed <- preprocessing(historical_data[-ind_test,], train_mode = TRUE)
 
 
 # Sauvergarder les objets calculés à l'étape précédente
-# write(jsonlite::toJSON(data_preprocessed$variables_a_imputer, pretty = TRUE), paste0(path_objects, "valeurs_imputations.json"))
-# saveRDS(data_preprocessed$objet_un_chaud, paste0(path_objects, "objet_un_chaud.rds"))
-# write(jsonlite::toJSON(data_preprocessed$vars_to_keep, pretty = TRUE), paste0(path_objects, "variables_a_conserver_classif.json"))
+write(jsonlite::toJSON(data_preprocessed$variables_a_imputer, pretty = TRUE), paste0(path_objects, "valeurs_imputations.json"))
+saveRDS(data_preprocessed$objet_un_chaud, paste0(path_objects, "objet_un_chaud.rds"))
+write(jsonlite::toJSON(data_preprocessed$vars_to_keep, pretty = TRUE), paste0(path_objects, "variables_a_conserver.json"))
 
 
 # Definir les matrices de données et réponses pour le modele
-# X_train <- copy(data_preprocessed$data_preprocess)[, target := NULL]
-# y_train <- data_preprocessed$data_preprocess$target
-# 
-# X_test <- preprocessing(historical_data[ind_test,],
-#                         train_mode = FALSE,
-#                         list_objects = list(variables_a_imputer = data_preprocessed$variables_a_imputer,
-#                                             objet_un_chaud = data_preprocessed$objet_un_chaud,
-#                                             vars_to_keep = data_preprocessed$vars_to_keep))
-# y_test <- as.integer(historical_data[ind_test,]$start_station_code == historical_data[ind_test,]$end_station_code)
+X_train <- copy(data_preprocessed$data_preprocess)[, target := NULL]
+y_train <- data_preprocessed$data_preprocess$target
+
+X_test <- preprocessing(historical_data[ind_test,],
+                        train_mode = FALSE,
+                        list_objects = list(variables_a_imputer = data_preprocessed$variables_a_imputer,
+                                            objet_un_chaud = data_preprocessed$objet_un_chaud,
+                                            vars_to_keep = data_preprocessed$vars_to_keep))
+y_test <- as.integer(historical_data[ind_test,]$start_station_code == historical_data[ind_test,]$end_station_code)
 
 
 
