@@ -73,7 +73,10 @@ ind_test <- sample(nrow(historical_data), 0.25 * nrow(historical_data))
 # y_test <- as.integer(historical_data[ind_test,]$start_station_code == historical_data[ind_test,]$end_station_code)
 
 
-# Tester ------------------------------------------------------------------
+
+# Modelisation ------------------------------------------------------------
+
+
 
 
 
