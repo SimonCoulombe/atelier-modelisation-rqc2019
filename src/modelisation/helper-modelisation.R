@@ -134,7 +134,7 @@ glm_cv <- train(x = ,
 
 # Modélisation - Sauvegarde du modèle final -------------------------------
 
-# saveRDS(votre_modele, "data/models/votre_modele.rds")
+# saveRDS(votre_modele, "models/model.rds")
 
 
 
