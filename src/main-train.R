@@ -77,7 +77,20 @@ y_test <- as.integer(historical_data[ind_test,]$start_station_code == historical
 
 # Modelisation ------------------------------------------------------------
 
+sub_sample <- sample(nrow(X_train), 1e+6)
 
+# glm_full <- glmnet::cv.glmnet(x = as.matrix(X_train)[sub_sample,],
+#                               y = y_train[sub_sample],
+#                               family = "gaussian",
+#                               nfolds = 5)
+
+ratio <- mean(y_train == 1)
+# xgb_full <- xgboost::xgboost(data = as.matrix(X_train), weight = (1-ratio)*y_train + ratio*(1-y_train), label = y_train, booster = "gbtree", objective = "binary:logistic", eval.metric = "logloss", nrounds = 20)
+xgb_full <- xgboost::xgboost(data = as.matrix(X_train), label = y_train, booster = "gbtree", objective = "reg:linear", eval.metric = "mae", nrounds = 20)
+
+
+# saveRDS(glm_full, paste0(path_objects, "glm.rds"))
+saveRDS(xgb_full, paste0(path_objects, "model.rds"))
 
 
 
