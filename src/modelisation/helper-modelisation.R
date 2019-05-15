@@ -30,7 +30,7 @@ coef(glm_basic)
 
 # Faire une prédiction -- predict
 
-predict(object = , newdata = )
+predict(object = , newx = )
 
 # Pour la classification, on a une probabilité...
 # Comment faire pour la transformer en réponse binaire?
@@ -76,7 +76,7 @@ plot(glm_cv)
 # (le nombre variables utilisé est indiqué en haut)
 # Pour utiliser predict, il faut spécifier une valeur de lambda
 #  avec l'option s.
-predict(object = , newdata = , s = une_valeur_pour_lambda)
+predict(object = , newx = , s = une_valeur_pour_lambda) # option : s= "lambda.min"
 
 
 
